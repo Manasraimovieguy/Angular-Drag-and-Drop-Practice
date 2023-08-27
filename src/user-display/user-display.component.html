@@ -1,0 +1,17 @@
+<div>
+  <input type="text" [(ngModel)]="searchInput" />
+  <button (click)="searchUsers()">Submit</button>
+</div>
+
+<table>
+  <thead>
+    <td>User Id</td>
+    <td>Login</td>
+    <td>Portfolio URL</td>
+  </thead>
+  <tr *ngFor="let user of users">
+    <td>{{ user.id }}</td>
+    <td>{{ user.login }}</td>
+    <td>{{ user.url }}</td>
+  </tr>
+</table>
